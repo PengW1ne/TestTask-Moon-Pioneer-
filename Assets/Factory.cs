@@ -28,7 +28,6 @@ public class Factory : MonoBehaviour{
 		while (currentResourceCount < StorageForProduced.MaxResourceCount){
 			yield return new WaitForSeconds(TimeForProduced);
 			StartCoroutine(StorageForProduced.AddResource(producedResourcePrefab));
-			currentResourceCount += 1;
 		}
 		isProduced = false;
 	}
